@@ -1,0 +1,16 @@
+* A Transport Adapter for Requests
+
+[[http://docs.python-requests.org/en/latest/][Requests]] v1.2.3 doesn't expose =httplib='s support (since Python 2.7) for specifying the source address for binding the socket used by =HTTPConnection=:
+
+- https://github.com/kennethreitz/requests/issues/394
+- https://github.com/kennethreitz/requests/issues/995
+- https://github.com/shazow/urllib3/issues/9
+
+"[[https://github.com/kennethreitz/requests/pull/1288#issuecomment-15880199][This is what connection adapters are for.]]"
+
+The example in =adapter.py= shows a basic implementation of a transport adapter that supports a =src_addr= keyword argument for specifying the source address. It has the following limitations:
+
+- Requires Python 2.7+ for source address support in =httplib= or =http.client=.
+- Not tested with Python 3.
+- Supports only HTTPS.
+- Doesn't validate SSL credentials.
