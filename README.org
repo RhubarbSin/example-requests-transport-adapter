@@ -1,5 +1,3 @@
-* A Transport Adapter for Requests
-
 [[http://docs.python-requests.org/en/latest/][Requests]] v1.2.3 doesn't expose =httplib='s support (since Python 2.7) for specifying the source address for binding the socket used by =HTTPConnection=:
 
 - https://github.com/kennethreitz/requests/issues/394
