@@ -6,7 +6,7 @@
 
 "[[https://github.com/kennethreitz/requests/pull/1288#issuecomment-15880199][This is what connection adapters are for.]]"
 
-The example in =adapter.py= shows a basic implementation of a [[http://docs.python-requests.org/en/latest/user/advanced/#transport-adapters][transport adapter]] that supports a =src_addr= keyword argument for specifying the source address. It has the following limitations because I [[http://c2.com/cgi/wiki?DoTheSimplestThingThatCouldPossiblyWork][did the simplest thing that could possibly work]] for my requirements:
+The example in =[[https://github.com/RhubarbSin/example-requests-transport-adapter/blob/master/adapter.py][adapter.py=]] shows a basic implementation of a [[http://docs.python-requests.org/en/latest/user/advanced/#transport-adapters][transport adapter]] that supports a =src_addr= keyword argument for specifying the source address. It has the following limitations because I [[http://c2.com/cgi/wiki?DoTheSimplestThingThatCouldPossiblyWork][did the simplest thing that could possibly work]] for my requirements:
 
 - Requires Python 2.7+ for source address support in =httplib= or =http.client=.
 - Not tested with Python 3.
